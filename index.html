@@ -1,82 +1,206 @@
-<html>
-	<head>
-		<title>Curriculum Vitae</title>
-	</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Tasin Mohammad Maruf</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --google-blue: #4285F4;
+            --google-red: #EA4335;
+            --google-yellow: #FBBC05;
+            --google-green: #34A853;
+            --text-dark: #202124;
+            --text-light: #5f6368;
+            --border-color: #dadce0;
+        }
 
-	<body>
-		<center>
-			<h2>Curriculum Vitae</h2>
-			<h1>Tasin Mohammad Maruf</h1>
-			<p>
-				Chattogram, Bangladesh <br />
-				Email: tasinmohammadmaruf@gmail.com <br />
-				Contact: +880 1816-590724
-			</p>
-		</center>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
 
-		<h3>Objective</h3>
-		<p>
-			I am a student of Computer Science and Engineering. I want to improve my
-			programming knowledge and gain practical skills for my future career.
-		</p>
+        .cv-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
 
-		<h3>Educational Qualification</h3>
+        header {
+            text-align: center;
+            border-bottom: 2px solid #f1f3f4;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
 
-		<p><b>SSC</b></p>
-		<p>
-			School: South Satkania Golambari Government Model High School <br />
-			Year: 2020 <br />
-			Result: GPA 4.72
-		</p>
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+        }
 
-		<p><b>HSC</b></p>
-		<p>
-			College: CDA Public School & College (CPSC) <br />
-			Year: 2023 <br />
-			Result: GPA 4.25
-		</p>
+        .contact-info {
+            color: var(--text-light);
+            font-size: 14px;
+        }
 
-		<p><b>B.Sc. in Computer Science & Engineering</b></p>
-		<p>
-			University: Premier University, Chattogram <br />
-			Status: Running
-		</p>
+        .contact-info span {
+            margin: 0 10px;
+        }
 
-		<h3>Technical Skills</h3>
-		<ul>
-			<li>Basic knowledge of C programming</li>
-			<li>Basic problem solving using C++</li>
-			<li>Basic understanding of Data Structures</li>
-			<li>HTML (Beginner)</li>
-			<li>MS Word, Excel and PowerPoint</li>
-		</ul>
+        h3 {
+            color: var(--google-blue);
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 30px;
+            border-bottom: 1px solid #e8eaed;
+            padding-bottom: 5px;
+        }
 
-		<h3>Personal Skills</h3>
-		<ul>
-			<li>Teamwork</li>
-			<li>Willing to learn new things</li>
-			<li>Good communication</li>
-		</ul>
+        .section-content {
+            padding-left: 5px;
+        }
 
-		<h3>Language Proficiency</h3>
-		<ul>
-			<li>Bangla</li>
-			<li>English</li>
-			<li>Hindi</li>
-			<li>Urdu</li>
-		</ul>
+        .edu-item {
+            margin-bottom: 20px;
+        }
 
-		<h3>Interests</h3>
-		<ul>
-			<li>Gym and fitness activities</li>
-			<li>Playing outdoor games</li>
-			<li>Video gaming</li>
-			<li>Watching educational videos</li>
-		</ul>
-		<h3>Declaration</h3>
-		<p>
-			I declare that the information given above is correct and true to the best
-			of my knowledge.
-		</p>
-	</body>
+        .edu-title {
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .edu-meta {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .declaration {
+            margin-top: 40px;
+            font-style: italic;
+            font-size: 13px;
+            color: var(--text-light);
+            text-align: center;
+            border-top: 1px solid #f1f3f4;
+            padding-top: 20px;
+        }
+
+        /* Responsive for mobile */
+        @media (max-width: 600px) {
+            ul { grid-template-columns: 1fr; }
+            .cv-container { padding: 20px; }
+            .edu-title { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <header>
+            <h1>Tasin Mohammad Maruf</h1>
+            <div class="contact-info">
+                Chattogram, Bangladesh • 
+                tasinmohammadmaruf@gmail.com • 
+                +880 1816-590724
+            </div>
+        </header>
+
+        <section>
+            <h3>Objective</h3>
+            <p class="section-content">
+                I am a student of Computer Science and Engineering. I want to improve my
+                programming knowledge and gain practical skills for my future career.
+            </p>
+        </section>
+
+        <section>
+            <h3>Educational Qualification</h3>
+            
+            <div class="edu-item">
+                <div class="edu-title">
+                    <span>B.Sc. in Computer Science & Engineering</span>
+                    <span>Running</span>
+                </div>
+                <div class="edu-meta">Premier University, Chattogram</div>
+            </div>
+
+            <div class="edu-item">
+                <div class="edu-title">
+                    <span>Higher Secondary Certificate (HSC)</span>
+                    <span>2023</span>
+                </div>
+                <div class="edu-meta">CDA Public School & College (CPSC) | GPA 4.25</div>
+            </div>
+
+            <div class="edu-item">
+                <div class="edu-title">
+                    <span>Secondary School Certificate (SSC)</span>
+                    <span>2020</span>
+                </div>
+                <div class="edu-meta">South Satkania Golambari Government Model High School | GPA 4.72</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>C Programming (Basic)</li>
+                <li>C++ Problem Solving</li>
+                <li>Data Structures</li>
+                <li>HTML (Beginner)</li>
+                <li>MS Office Suite</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Personal Skills & Languages</h3>
+            <ul>
+                <li>Teamwork & Collaboration</li>
+                <li>Continuous Learning</li>
+                <li>Effective Communication</li>
+                <li>Bangla, English, Hindi, Urdu</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Interests</h3>
+            <ul>
+                <li>Gym & Fitness</li>
+                <li>Outdoor Sports</li>
+                <li>Gaming</li>
+                <li>Educational Content</li>
+            </ul>
+        </section>
+
+        <div class="declaration">
+            I declare that the information given above is correct and true to the best of my knowledge.
+        </div>
+    </div>
+
+</body>
 </html>
